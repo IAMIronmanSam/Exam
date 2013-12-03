@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Sematics</title>
+    
+    <link rel="stylesheet" type="text/css"
+            href="/css/style.css" />
+</head>
+
+<body>
+    <h1>HTML5 Sematics</h1>
+    <li>
+        <p>Abbreviation: </p><abbr title="United States Of America">USA</abbr>
+    </li>
+    <li class="info"> <p >Address:</p>
+        <address>
+            You can contact author at <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
+            If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br>
+            You may also want to visit us:<br>
+            Mozilla Foundation<br>
+            1981 Landings Drive<br>
+            Building K<br>
+            Mountain View, CA 94043-0801<br>
+            USA
+  </address>
+    </li>
+    <li> <p>Area: Image with clickable areas</p>
+    <img src="/media/Brands.jpg" alt="Brands" usemap="#planetmap">
+        <map name="planetmap">
+          <area shape="Rectangle" title="Google" target="_blank" coords="0,0,274,152" alt="Google" href="http://www.google.com">
+          <area shape="Rectangle"  title="Apple" target="_blank" coords="262,45,396,171" alt="Apple" href="http://www.apple.com">
+          <area shape="Square" title="Microsoft" target="_blank" coords="53,178,392,333" alt="Microsoft" href="http://www.microsoft.com">
+        </map>
+    </li>
+    <li> <p>Article: Used for Comment,RSS Feed its a independent section of a page</p>
+        <article>
+                <h1>The article title</h1>
+                <p>This is the contents of the article element.</p>
+        </article>
+    </li>
+    <li class="info">
+        <p >Aside: Related Content</p>
+        <h1>My family and I visited The Epcot center this summer.</h1>
+        <aside>
+            <h4>Epcot Center</h4>
+            <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+        </aside>
+    </li>
+    <li>
+        <p>Audio: playback with control </p>
+        <audio src="/media/AudioTest.ogg" controls>
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+    </li>
+    <li class="info">
+        <p class="info">Base tag specifies the base URL/target for all relative URLs in a document.</p>
+    </li>
+    <li class="dead"> <p>BB Tag - Removed from HTML5</p>
+    </li>
+    <li><p>BDO: This text will go left to right.</p>
+        <p><bdo dir="rtl">This text will go right to left.</bdo></p>
+    </li>
+    <li><p>Blockquote:</p>
+        <blockquote cite="http://developer.mozilla.org">
+            <p>This is a quotation taken from the Mozilla Developer Center.</p>
+        </blockquote>
+    </li>
+    <li>
+       <p> The canvas tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
+       Tag is only a container for graphics, you must use a script to actually draw the graphics. </p>
+        <canvas id="myCanvas"></canvas>
+    </li>
+        
+        <script type="application/javascript" src="js/script.js"></script>
+</body>
+
+</html>
