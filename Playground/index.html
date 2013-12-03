@@ -4,10 +4,18 @@
 <title>HTML5 Sematics</title>
     
     <link rel="stylesheet" type="text/css"
-            href="/css/style.css" />
+            href="css/style.css" />
 </head>
 
-<body>
+<body contextmenu="share">
+    <!--Context Menu Start Here -->
+    <menu type="context" id="share">
+        <menu label="share">
+          <menuitem label="Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Hurray! I am learning ContextMenu from MDN via Mozilla');"></menuitem>
+          <menuitem label="Facebook" onclick="window.open('https://facebook.com/sharer/sharer.php?u=https://https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus');"></menuitem>
+        </menu>
+    </menu>
+    <!--Context Menu Ends Here -->
     <h1>HTML5 Sematics</h1>
     <li>
         <p>Abbreviation: </p><abbr title="United States Of America">USA</abbr>
@@ -25,7 +33,7 @@
   </address>
     </li>
     <li> <p>Area: Image with clickable areas</p>
-    <img src="/media/Brands.jpg" alt="Brands" usemap="#planetmap">
+    <img src="media/Brands.jpg" alt="Brands" usemap="#planetmap">
         <map name="planetmap">
           <area shape="Rectangle" title="Google" target="_blank" coords="0,0,274,152" alt="Google" href="http://www.google.com">
           <area shape="Rectangle"  title="Apple" target="_blank" coords="262,45,396,171" alt="Apple" href="http://www.apple.com">
@@ -70,7 +78,40 @@
        Tag is only a container for graphics, you must use a script to actually draw the graphics. </p>
         <canvas id="myCanvas"></canvas>
     </li>
-        
+    <li>
+        <p>accesskey: Alt+G / Shift+Alt+G</p>
+        <a href="http://www.google.com" accesskey="G">Google</a>
+    </li>
+    <li>
+        <p>contextmenu: Menu that appear on user interaction like Right Click [Working Only in Firefox]</p>
+  
+        <ol>
+    <li>Anywhere in the example you can share the page on Twitter and Facebook using the Share menu from your context menu.</li>
+    <li><pre contextmenu="changeFont" id="fontSizing">On this specific list element, you can change the size of the text by using the "Increase/Decrease font" actions from your context menu</pre></li>
+    <menu type="context" id="changeFont">
+      <menuitem label="Increase Font" onclick="sematics.contextmenu.incFont()"></menuitem>
+      <menuitem label="Decrease Font" onclick="sematics.contextmenu.decFont()"></menuitem>
+    </menu>
+    <li contextmenu="ChangeImage" id="changeImage">One the image below, you can fire the "Change Image" action in your Context Menu.</li><br />
+    <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" />
+    <menu type="context" id="ChangeImage">
+      <menuitem label="Change Image" onclick="sematics.contextmenu.changeImage()"></menuitem>
+    </menu>
+  </ol>
+    </li>
+    <li>
+        <p>Drag image into the rectangle:</p>
+        <div id="dropzone" ondrop="sematics.dragdrop.drop(event)" ondragover="sematics.dragdrop.allowDrop(event)"></div><br>
+        <img id="drag1" src="media/Brands.jpg" draggable="true" ondragstart="sematics.dragdrop.drag(event)" width="336" height="69">
+    </li>
+    <li>
+        <p>lang: Specifies language for an element</p>
+         <p lang="fr">Ceci est un paragraphe.</p>
+    </li>
+    <li>
+        <p>Spellcheck</p>
+        First name: <input type="text" name="fname" spellcheck="true">
+    </li>
         <script type="application/javascript" src="js/script.js"></script>
 </body>
 

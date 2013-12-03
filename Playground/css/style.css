@@ -2,9 +2,8 @@ body{
     font-size:25px;
     left:0px;
     right:0px;
-    
 }
-
+#dropzone {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
 .info{    background-color:yellow;}
 
 .dead{background-color:red;}
